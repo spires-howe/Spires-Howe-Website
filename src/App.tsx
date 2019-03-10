@@ -7,11 +7,11 @@ import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import './App.css';
 import { NavBarComponent } from './components/nav-bar/nav-bar';
-import { ENGINE_METHOD_DIGESTS } from 'constants';
 import { HomeComponent } from './components/home/home';
 import { AboutComponent } from './components/about/about';
 import { PricingComponent } from './components/pricing/pricing';
 import { ContactComponent } from './components/contact/contact';
+import posed from 'react-pose';
 
 enum NavItem {
   Home,
@@ -28,32 +28,31 @@ interface State {
   currentSelectedNavLink: NavItem;
 }
 
-class App extends Component<Props, State> {
+class App extends React.Component<Props, State> {
   constructor(props: Props){
     super(props)
     this.state = {
-      currentSelectedNavLink: NavItem.Home
+      currentSelectedNavLink: NavItem.Home,
     }
   }
   
   render() {
     const contentToRender = this.loadContentToRender(this.state.currentSelectedNavLink);
     return (
-      <div className="App">
-        <Navbar bg="light" expand="lg" fixed="top">
-          <Navbar.Brand href="#home" onClick={() => this.changeSelectedNavItem(NavItem.Home)}>Spires & Howe</Navbar.Brand>
+      <div>
+        <Navbar bg="light" expand="lg" sticky='top' >
+        <Navbar.Brand>Spires & Howe</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse>
           <Nav className="ml-auto">
-              <Nav.Link href="#pricing" className="nav-item" onSelect={() => this.changeSelectedNavItem(NavItem.Pricing)}>Pricing</Nav.Link>
+              <Nav.Link href="#home" onSelect={() => this.changeSelectedNavItem(NavItem.Home)}>Home</Nav.Link>
               <Nav.Link href="#about" onSelect={() => this.changeSelectedNavItem(NavItem.About)}>What We Do</Nav.Link>
+              <Nav.Link href="#pricing" onSelect={() => this.changeSelectedNavItem(NavItem.Pricing)}>Pricing</Nav.Link>              
               <Nav.Link href="#contact" onSelect={() => this.changeSelectedNavItem(NavItem.Contact)}>Contact Us</Nav.Link>                    
           </Nav>
           </Navbar.Collapse>
         </Navbar>
-        <header className="App-header">
-        {contentToRender}
-        </header>
+          {contentToRender}        
       </div>
     );
   }

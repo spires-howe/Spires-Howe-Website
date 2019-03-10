@@ -1,9 +1,29 @@
-.App {
-  text-align: center;
+body {
+  background-color: white;
+}
+
+
+.app-content {
+  background-color: black;
 }
 
 .nav-link {
   font-size: 1.3em;
+}
+
+.navbar-light .navbar-brand {
+  border-bottom: solid 1px black;
+}
+
+.navbar-expand-lg .navbar-nav {
+  border-bottom: solid lightgray 1px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: #ff1c68;
+  transform-origin: 50% 50%;
 }
 
 .App-logo {
@@ -15,12 +35,8 @@
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: red;
 }
 
 .App-link {
