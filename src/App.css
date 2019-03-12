@@ -5,8 +5,14 @@ body {
 a:hover {
   text-decoration: none;
 }
-.app-content {
-  background-color: black;
+
+a {
+  color: black;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
 }
 
 .selectedNavLink {

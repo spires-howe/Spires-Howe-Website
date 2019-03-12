@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import posed from 'react-pose';
 
-const SideTransition = posed.ul({
+const SideTransition = posed.div({
     open: {
       x: '0%',
       delayChildren: 10,
       staggerChildren: 50
     },
     closed: { x: '-100%', delay: 10 }
-  });
+});
 
 const Item = posed.li({
     open: { y: 0, opacity: 1 },
@@ -26,7 +26,7 @@ export class PricingComponent extends React.Component {
 
     componentDidMount() {
         setTimeout(this.toggle);
-      }
+    }
 
     toggle = () => this.setState({ isOpen: !this.state.isOpen });
     
@@ -41,8 +41,7 @@ export class PricingComponent extends React.Component {
                 <p>HELLO THERE</p>
                 <p>HELLO THERE</p>
                 <p>HELLO THERE</p>
-                <p>HELLO THERE</p>
-                
+                <p>HELLO THERE</p>  
             </SideTransition>
         )
     }

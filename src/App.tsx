@@ -12,11 +12,20 @@ import { AboutComponent } from './components/about/about';
 import { PricingComponent } from './components/pricing/pricing';
 import { ContactComponent } from './components/contact/contact';
 import posed from 'react-pose';
-import { BrowserRouter as Router, Route, Link, withRouter, NavLink, Redirect } from "react-router-dom"
+import { BrowserRouter as Router, Route, Link, withRouter, NavLink, Redirect, RouteComponentProps } from "react-router-dom"
 import { NavRouting } from './components/nav-routing';
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 
-class App extends React.Component {
- 
+interface State {
+}
+
+interface Props {
+
+}
+class App extends React.Component<Props, State> {
+  state = {
+    showLearnMoreButton: true
+  }
   render() {
     return (
         <Router>
@@ -37,17 +46,22 @@ class App extends React.Component {
               </Nav>
               </Navbar.Collapse>
             </Navbar> 
-
             <Route exact path="/" render={() => (
               <Redirect to="/home"/>              
             )} />
-            <Route path="/home/" component={HomeComponent}/>
+            <Route path="/home/" component={() => <HomeComponent showLearnMoreButton={this.toggleLearnMoreButtonDisplay}/>} />
             <Route path="/pricing/" component={PricingComponent} />
             <Route path="/about/" component={AboutComponent} />
             <Route path="/contact/" component={ContactComponent} />
           </div>
         </Router>
     );
+  }
+
+  private toggleLearnMoreButtonDisplay = (displayButton: boolean) => {
+    this.setState({
+      showLearnMoreButton: displayButton
+    })
   }
 }
 
