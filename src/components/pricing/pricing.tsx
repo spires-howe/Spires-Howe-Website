@@ -19,11 +19,15 @@ interface State {
     isOpen: boolean;
 }
 
-export class PricingComponent extends React.Component {
+interface Props {
+
+}
+
+export class PricingComponent extends React.Component<Props, State> {
     state = {
         isOpen: false
     }
-
+    
     componentDidMount() {
         setTimeout(this.toggle);
     }

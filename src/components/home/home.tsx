@@ -3,8 +3,6 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row'; 
 import Col from 'react-bootstrap/Col'; 
 import './home.css';
-import Button from 'react-bootstrap/Button';
-import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
 import { BrowserRouter as Router, Route, Link, withRouter, NavLink, Redirect, RouteComponentProps } from "react-router-dom"
 import { AboutComponent } from '../about/about';
 import posed from 'react-pose';
@@ -48,8 +46,8 @@ render() {
               <div className="homeHeaderContainer"> 
                 <h1 className="homeHeaderText">Spires & Howe</h1>
                 <div className="homeHeaderDescContainer">
-                  <p className="homeHeaderDescContainerText">We build custom and affordable websites, tailored to your needs. </p>
-                  <p className="homeHeaderDescContainerText homeHeaderDescContainerText--secondary">Helping out our Kiwi Community.</p>
+                  <p className="homeHeaderDescContainerText">We build <span style={{color:'red'}}>custom</span> and <span style={{color:'red'}}>affordable websites</span>, tailored to your needs. </p>
+                  <p className="homeHeaderDescContainerText homeHeaderDescContainerText--secondary">Websites as a product, not a contracting service.</p>
                 <hr className="headerHR"/>
                 </div>
               </div>

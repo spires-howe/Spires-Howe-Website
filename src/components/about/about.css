@@ -4,3 +4,43 @@
     background: #ff1c68;
     transform-origin: 50% 50%;
   }
+
+ .col-lg {
+  display: flex !important;
+  justify-content: center !important;
+ }
+
+ .handIconContainer {
+   display: flex;
+   justify-content: center;
+
+ }
+
+ .handIcon {
+  border-radius: 100%;
+  padding: 10px;
+}
+
+.bannerContainer {
+  background-color: red;
+}
+ .bannerTextContainer {
+   margin-top: 20px;
+   color:black;
+   text-align: center;
+   border: 2px red solid;
+   border-radius: 2%;
+   padding: 30px;
+ }
+
+ .processHeaderText {
+  font-size: 30px;
+  margin-top: 15px;
+}
+
+ /* .cardPositioning {
+  display:inline-block;
+  float:none;
+  text-align:left;
+  text-align: center; */
+ /* } */
