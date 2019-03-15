@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
+import { EmailComponent } from '../../components/email/email';
 
 export class ContactComponent extends React.Component {
     render() {
         return (
             <div>
-                <p>
-                    Welcome to the Contact page!
-                </p>
+               <EmailComponent />
             </div>
         )
     }

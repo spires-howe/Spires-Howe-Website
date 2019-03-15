@@ -9,7 +9,6 @@ import posed from 'react-pose';
  
 
 interface Props {
-  showLearnMoreButton: any;
 }
 interface State {
   isOpen: boolean;

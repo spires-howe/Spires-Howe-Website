@@ -7,25 +7,24 @@ import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import './App.css';
 import { NavBarComponent } from './components/nav-bar/nav-bar';
-import { HomeComponent } from './components/home/home';
-import { AboutComponent } from './components/about/about';
-import { PricingComponent } from './components/pricing/pricing';
-import { ContactComponent } from './components/contact/contact';
 import posed from 'react-pose';
 import { BrowserRouter as Router, Route, Link, withRouter, NavLink, Redirect, RouteComponentProps } from "react-router-dom"
 import { NavRouting } from './components/nav-routing';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
+import { HomeComponent } from './views/home/home';
+import { PricingComponent } from './views/pricing/pricing';
+import { AboutComponent } from './views/about/about';
+import { ContactComponent } from './views/contact/contact';
+require('dotenv').config();
 
 interface State {
+  isLoading: boolean;
 }
 
 interface Props {
 
 }
 class App extends React.Component<Props, State> {
-  state = {
-    showLearnMoreButton: true
-  }
   render() {
     return (
         <Router>
@@ -49,19 +48,13 @@ class App extends React.Component<Props, State> {
             <Route exact path="/" render={() => (
               <Redirect to="/home"/>              
             )} />
-            <Route path="/home/" component={() => <HomeComponent showLearnMoreButton={this.toggleLearnMoreButtonDisplay}/>} />
+            <Route path="/home/" component={HomeComponent} />
             <Route path="/pricing/" component={PricingComponent} />
             <Route path="/about/" component={AboutComponent} />
             <Route path="/contact/" component={ContactComponent} />
           </div>
         </Router>
     );
-  }
-
-  private toggleLearnMoreButtonDisplay = (displayButton: boolean) => {
-    this.setState({
-      showLearnMoreButton: displayButton
-    })
   }
 }
 
