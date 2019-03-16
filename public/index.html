@@ -2,6 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <script type="text/javascript">
+      (function(){
+         emailjs.init("user_rWooA09BmjbRua0EsUcL6");
+      })();
+   </script>
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
     <link
       rel="stylesheet"
@@ -9,6 +14,7 @@
       integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./index.css">
     <link href="https://fonts.googleapis.com/css?family=Overpass:400,600" rel="stylesheet">
     <meta
       name="viewport"
@@ -33,7 +39,12 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+          </div>
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

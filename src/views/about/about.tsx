@@ -53,7 +53,7 @@ export class AboutComponent extends React.Component<Props, State> {
                                         </div>
                                         <p style={{letterSpacing:"2px", fontSize:'20px'}}>
                                             At Spires & Howe we treat our websites as a product. Rather than contracting our <br />services at an hourly rate, we provide websites at a set price. 
-                                            You know <br />what exactly what we are building and you know the exact final price.
+                                            You know <br />exactly what we are building and you know the exact final price.
                                         </p>
                                     </div>
                                 </div>
