@@ -64,6 +64,15 @@ render() {
       </SideTransition>
     )
   }
+
+
+
+
+
+
+
+
+
 }
 
 export default HomeComponent;
