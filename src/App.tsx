@@ -8,7 +8,7 @@ import FormControl from 'react-bootstrap/FormControl';
 import './App.css';
 import { NavBarComponent } from './components/nav-bar/nav-bar';
 import posed from 'react-pose';
-import { BrowserRouter as Router, Route, Link, withRouter, NavLink, Redirect, RouteComponentProps } from "react-router-dom"
+import { BrowserRouter as Router, Route, Link, withRouter, NavLink, Redirect, RouteComponentProps, Switch } from "react-router-dom"
 import { NavRouting } from './components/nav-routing';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import { HomeComponent } from './views/home/home';
@@ -44,14 +44,18 @@ class App extends React.Component<Props, State> {
                   <NavRouting routePath='/contact' routeText='Contact Us'/>                    
               </Nav>
               </Navbar.Collapse>
-            </Navbar> 
+            </Navbar>
+            {/* <Switch> */}
+             
             <Route exact path="/" render={() => (
               <Redirect to="/home"/>              
             )} />
-            <Route path="/home/" component={HomeComponent} />
-            <Route path="/pricing/" component={PricingComponent} />
-            <Route path="/about/" component={AboutComponent} />
-            <Route path="/contact/" component={ContactComponent} />
+              <Route path="/home/" component={HomeComponent} />
+              <Route path="/pricing/" component={PricingComponent} />
+              <Route path="/about/" component={AboutComponent} />
+              <Route path="/contact/" component={ContactComponent} />
+            {/* </Switch> */}
+            
           </div>
         </Router>
     );
