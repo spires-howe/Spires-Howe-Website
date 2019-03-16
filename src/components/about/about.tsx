@@ -44,7 +44,7 @@ export class AboutComponent extends React.Component<Props, State> {
                             <Col lg={true}>
                                 <div className="bannerTextContainer">
                                     <h2 style={{fontWeight:'bold', letterSpacing:'10px'}}>WHAT WE DO</h2>
-                                    <hr></hr>
+                                    {/* <hr></hr> */}
                                     <div>
                                         <div className={"handIconContainer"}>
                                             <div style={{backgroundColor:'white', width:'100px'}} className={'handIcon'}>
@@ -59,7 +59,7 @@ export class AboutComponent extends React.Component<Props, State> {
                                 </div>
                             </Col>
                         </Row>
-                        <Row>
+                        <Row style={{marginTop: '20px'}}>
                             <Col lg={true}>
                                 <h2 style={{fontWeight:'bold', letterSpacing:'10px', marginTop:'50px'}}>OUR PROCESS</h2>
                             </Col>
