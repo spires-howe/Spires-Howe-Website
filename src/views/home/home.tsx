@@ -49,16 +49,15 @@ render() {
                     <div className="homeHeaderDescContainer">
                       <p className="homeHeaderDescContainerText">We build <span style={{color:'red'}}>custom</span> and <span style={{color:'red'}}>affordable websites</span>, tailored to your needs. </p>
                       <p className="homeHeaderDescContainerText homeHeaderDescContainerText--secondary">Websites as a product, not a contracting service.</p>
-                    <hr className="headerHR"/>
-                    <div className="buttonContainer">
-                      <NavLink to="/about"><Button variant="outline-dark">Learn More</Button></NavLink> 
+                      <hr className="headerHR"/>
+                      <div className="buttonContainer">
+                        <NavLink to="/about"><Button variant="outline-dark">Learn More</Button></NavLink> 
+                      </div>
                     </div>
-                    </div>
-                    
                   </div>
                 </Col>
               </Row>
-            </Container>
+          </Container>
             <Route path="/about/" component={AboutComponent} />
         </div>
       </SideTransition>

@@ -1,16 +1,9 @@
 import React, { Component } from 'react';
-import Button from 'react-bootstrap/Button';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav'; 
-import NavDropdown from 'react-bootstrap/NavDropdown'; 
-import Form from 'react-bootstrap/Form'; 
-import FormControl from 'react-bootstrap/FormControl';
 import './App.css';
-import { NavBarComponent } from './components/nav-bar/nav-bar';
-import posed from 'react-pose';
-import { BrowserRouter as Router, Route, Link, withRouter, NavLink, Redirect, RouteComponentProps, Switch } from "react-router-dom"
+import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom"
 import { NavRouting } from './components/nav-routing';
-import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import { HomeComponent } from './views/home/home';
 import { PricingComponent } from './views/pricing/pricing';
 import { AboutComponent } from './views/about/about';

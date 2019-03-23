@@ -1,6 +1,11 @@
 import React, { Component, createRef } from 'react';
 import Form from 'react-bootstrap/Form';
 import * as emailjs from 'emailjs-com';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
+import Button from 'react-bootstrap/Button';
+import './email.css'
 
 interface State {
     name: string;
@@ -39,36 +44,57 @@ export class EmailComponent extends React.Component<Props, State> {
          let service_id = "123";
          let template_id = "bus_email";
          emailjs.send(service_id, template_id, template_params).then(res => {
-             console.log('Email Succesfully Sent!')
+             alert('Email Successfully Sent!');
+             console.log('Email Succesfully Sent!');
          })
          .catch(err => console.log("Error has occured", err));
     }
 
     render() {
         return (
-            <form onSubmit={(e) => this.handleSubmit(e)}>
-                <label>
-                Name:
-                </label>
-                
-                <input 
-                    type="text"
-                    placeholder='name'
-                    onChange={(e) => this.setState({name: e.target.value})}/>
-                <input 
-                    type="text"
-                    placeholder='phone number'
-                    onChange={(e) => this.setState({phoneNumber: e.target.value})}/>
-                <input 
-                    type="text"
-                    placeholder='email'
-                    onChange={(e) => this.setState({email: e.target.value})}/>
-                <input 
-                    type="text"
-                    placeholder='message'
-                    onChange={(e) => this.setState({message: e.target.value})}/>
-                <button type='submit'>Submit</button>
-            </form>
+                <Form onSubmit={(e: any) => this.handleSubmit(e)} style={{marginBottom: '50px'}}>
+                    <Form.Group controlId='formBasicName' as={Row}> 
+                        <Col lg="5" sm="8">
+                            <Form.Control 
+                                type="text"
+                                placeholder='name'
+                                onChange={(e: any) => this.setState({name: e.target.value})}/>
+                        </Col>
+                    </Form.Group>
+
+                    <Form.Group as={Row}>
+                        <Col lg="5" sm="8">
+                            <Form.Control 
+                                type="text"
+                                placeholder='phone number'
+                                onChange={(e:any) => this.setState({phoneNumber: e.target.value})}/>
+                        </Col>
+                    </Form.Group>
+                    
+                    <Form.Group as={Row}>
+                        <Col lg="5" sm="8">
+                            <Form.Control 
+                                type="text"
+                                placeholder='email'
+                                onChange={(e:any) => this.setState({email: e.target.value})}/>
+                        </Col>
+                        
+                    </Form.Group>
+                    
+                    <Form.Group as={Row}>
+                        <Col lg="8" sm="10">
+                            <Form.Control as="textarea" rows="5"
+                                type="text"
+                                placeholder='message'
+                                onChange={(e:any) => this.setState({message: e.target.value})}/>
+                        </Col>
+                    </Form.Group>
+                    
+                    <ButtonToolbar>
+                        <Button type='submit' variant="outline-danger">Send</Button>
+                    </ButtonToolbar>
+                </Form>
+            
         )
     }
 }

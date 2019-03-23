@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Nav from 'react-bootstrap/Nav';
-import { NavLink, Link } from 'react-router-dom';
-import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
-import Button from 'react-bootstrap/Button';
+import { NavLink } from 'react-router-dom';
 
 interface Props {
     routePath: string;

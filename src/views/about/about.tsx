@@ -4,6 +4,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'; 
 import './about.css';
+import HeaderComponent from '../../components/header/header';
+import { ourWebsiteText } from './constants/about-text';
 
 interface State {
     isOpen: boolean;
@@ -43,8 +45,7 @@ export class AboutComponent extends React.Component<Props, State> {
                         <Row>
                             <Col lg={true}>
                                 <div className="bannerTextContainer">
-                                    <h2 style={{fontWeight:'bold', letterSpacing:'10px'}}>WHAT WE DO</h2>
-                                    {/* <hr></hr> */}
+                                    <HeaderComponent title={'WHAT WE DO'} hrColor='red'/>
                                     <div>
                                         <div className={"handIconContainer"}>
                                             <div style={{backgroundColor:'white', width:'100px'}} className={'handIcon'}>
@@ -59,16 +60,7 @@ export class AboutComponent extends React.Component<Props, State> {
                                 </div>
                             </Col>
                         </Row>
-                        <Row style={{marginTop: '20px'}}>
-                            <Col lg={true}>
-                                <h2 style={{fontWeight:'bold', letterSpacing:'10px', marginTop:'50px'}}>OUR PROCESS</h2>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col lg={12}>
-                                <hr></hr>
-                            </Col>
-                        </Row>
+                        <HeaderComponent title={'OUR PROCESS'}/>
                         <Row style={{textAlign:'center'}}>
                             <Col lg={4} md={6} sm={12}>
                                 <img src={require('../../assets/icon-images/lightBuldHead.png')}/>
@@ -92,16 +84,32 @@ export class AboutComponent extends React.Component<Props, State> {
                                 </p>
                             </Col>
                         </Row>
+                        <div className="ourWebsitesContainer">
+                            <HeaderComponent title='OUR WEBSITES' hrColor='white' titleColor='white'/>
+                            <Row>
+                                <Col lg={1} md={1}></Col>
+                                <Col lg={5} md={5}>
+                                    <p className='ourWebsiteTextHeaders'>The Best Technologies</p>
+                                    <p className='ourWebsiteText'>{ourWebsiteText}</p>
+                                </Col>
+                                <Col lg={5} md={5}>
+                                    <p className='ourWebsiteTextHeaders'>Content Management System</p>
+                                    <p className='ourWebsiteText'>{ourWebsiteText}</p>
+                                </Col>
+                                <Col lg={1} md={1}></Col>
+                            </Row>
+                        </div>
+                        
                     </Container>
                 </SideTransition>
-                <div>Icons made by 
+                {/* <div>Icons made by 
                     <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons
                     </a> 
                     <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a>
                     from 
                 <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY
                     </a>
-                </div>
+                </div> */}
             </div>
 
 
