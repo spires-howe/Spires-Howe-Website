@@ -10,14 +10,10 @@ import { AboutComponent } from './views/about/about';
 import { ContactComponent } from './views/contact/contact';
 require('dotenv').config();
 
-interface State {
-  isLoading: boolean;
-}
-
 interface Props {
 
 }
-class App extends React.Component<Props, State> {
+class App extends React.Component<Props> {
   render() {
     return (
         <Router>
@@ -38,8 +34,6 @@ class App extends React.Component<Props, State> {
               </Nav>
               </Navbar.Collapse>
             </Navbar>
-            {/* <Switch> */}
-             
             <Route exact path="/" render={() => (
               <Redirect to="/home"/>              
             )} />
@@ -47,7 +41,6 @@ class App extends React.Component<Props, State> {
               <Route path="/pricing/" component={PricingComponent} />
               <Route path="/about/" component={AboutComponent} />
               <Route path="/contact/" component={ContactComponent} />
-            {/* </Switch> */}
             
           </div>
         </Router>

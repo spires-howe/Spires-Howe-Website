@@ -10,17 +10,22 @@
   justify-content: center !important;
  }
 
+
  .handIconContainer {
    display: flex;
    justify-content: center;
 
  }
 
+ .ourProcessContainer {
+   text-align: center;
+ }
+
  .ourWebsitesContainer{
    padding-top: 1px;
    margin-top: 40px;
    box-shadow: 0 -5px 20px -5px #333;
-   background-color: #ff2d2d;
+   background-color: #fb4c4c;
    border: 1px solid darkred;
  }
 
@@ -28,15 +33,20 @@
 
  .ourWebsiteTextHeaders {
    font-weight: bold;
-   color: white;
+   color: black;
    font-size: 20px;
-   letter-spacing: 1px;
-   /* text-align: center; */
+   letter-spacing: 3px;
+   text-align: center;
+   /* background: white; */
+   /* border: 1px solid black; */
  }
 
  .ourWebsiteText {
-   color: white;
+   color: black;
    letter-spacing: 1px;
+   text-align: center;
+   /* background: white; */
+   /* border: 1px solid black; */
  }
 
  .handIcon {
@@ -50,7 +60,6 @@
  .bannerTextContainer {
    color:black;
    text-align: center;
-   /* padding: 30px; */
  }
 
  .processHeaderText {
@@ -58,9 +67,8 @@
   margin-top: 15px;
 }
 
- /* .cardPositioning {
-  display:inline-block;
-  float:none;
-  text-align:left;
-  text-align: center; */
- /* } */
+.paperContainer {
+  border: 1px solid black;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}

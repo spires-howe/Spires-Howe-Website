@@ -6,6 +6,7 @@ import './contact.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import posed from 'react-pose';
+import { FooterComponent } from '../../components/footer/footer';
 
 
 interface State {
@@ -69,6 +70,7 @@ export class ContactComponent extends React.Component<Props, State> {
                             </div>
                             <EmailComponent />
                         </div>
+                        <FooterComponent />
                     </Container>
                 </SideTransition>
             </div>

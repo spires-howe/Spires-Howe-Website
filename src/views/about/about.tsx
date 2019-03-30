@@ -6,6 +6,9 @@ import Col from 'react-bootstrap/Col';
 import './about.css';
 import HeaderComponent from '../../components/header/header';
 import { ourWebsiteText } from './constants/about-text';
+import Paper from '@material-ui/core/Paper';
+import { FeatureCardComponent } from '../../components/feature-card/feature-card';
+
 
 interface State {
     isOpen: boolean;
@@ -47,7 +50,7 @@ export class AboutComponent extends React.Component<Props, State> {
                                 <div className="bannerTextContainer">
                                     <HeaderComponent title={'WHAT WE DO'} hrColor='red'/>
                                     <div>
-                                        <div className={"handIconContainer"}>
+                                        <div className="handIconContainer">
                                             <div style={{backgroundColor:'white', width:'100px'}} className={'handIcon'}>
                                                 <img src={require('../../assets/icon-images/handshake.png')}/>   
                                             </div>
@@ -61,7 +64,7 @@ export class AboutComponent extends React.Component<Props, State> {
                             </Col>
                         </Row>
                         <HeaderComponent title={'OUR PROCESS'}/>
-                        <Row style={{textAlign:'center'}}>
+                        <Row className='ourProcessContainer'>
                             <Col lg={4} md={6} sm={12}>
                                 <img src={require('../../assets/icon-images/lightBuldHead.png')}/>
                                 <p className="processHeaderText">You <span style={{color:'red'}}>Dream</span> It</p>
@@ -86,15 +89,33 @@ export class AboutComponent extends React.Component<Props, State> {
                         </Row>
                         <div className="ourWebsitesContainer">
                             <HeaderComponent title='OUR WEBSITES' hrColor='white' titleColor='white'/>
-                            <Row>
+                            <Row style={{marginTop: 20}}>
                                 <Col lg={1} md={1}></Col>
                                 <Col lg={5} md={5}>
-                                    <p className='ourWebsiteTextHeaders'>The Best Technologies</p>
-                                    <p className='ourWebsiteText'>{ourWebsiteText}</p>
+                                    <FeatureCardComponent cardTitle={'The Best Technologies'} cardDesc={ourWebsiteText} />
                                 </Col>
                                 <Col lg={5} md={5}>
-                                    <p className='ourWebsiteTextHeaders'>Content Management System</p>
-                                    <p className='ourWebsiteText'>{ourWebsiteText}</p>
+                                    <FeatureCardComponent cardTitle={'Content Management System'} cardDesc={ourWebsiteText}/>
+                                </Col>
+                                <Col lg={1} md={1}></Col>
+                            </Row>
+                            <Row style={{marginTop: 20}}>
+                                <Col lg={1} md={1}></Col>
+                                <Col lg={5} md={5}>
+                                    <FeatureCardComponent cardTitle={'Optional Photography Included'} cardDesc={ourWebsiteText}/>
+                                </Col>
+                                <Col lg={5} md={5}>
+                                    <FeatureCardComponent cardTitle={'Optional Search Engine Optimisation'} cardDesc={ourWebsiteText}/>
+                                </Col>
+                                <Col lg={1} md={1}></Col>
+                            </Row>
+                            <Row style={{marginTop: 20}}>
+                                <Col lg={1} md={1}></Col>
+                                <Col lg={5} md={5}>
+                                    <FeatureCardComponent cardTitle={'Graphic and Logo Design'} cardDesc={ourWebsiteText}/>
+                                </Col>
+                                <Col lg={5} md={5}>
+                                    <FeatureCardComponent cardTitle={'Graphic and Logo Design'} cardDesc={ourWebsiteText}/>
                                 </Col>
                                 <Col lg={1} md={1}></Col>
                             </Row>
