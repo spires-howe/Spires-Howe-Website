@@ -13,7 +13,7 @@ export default class HeaderComponent extends React.Component<Props> {
     render() {
         return (
             <div>
-                <Row style={{marginTop: '40px', padding: 10}}>
+                <Row style={{marginTop: '20px', padding: 10}}>
                     <Col lg={true}>
                         <h2 style={{fontWeight:'bold', letterSpacing:'10px', color: this.props.titleColor}}>{this.props.title}</h2>
                     </Col>
