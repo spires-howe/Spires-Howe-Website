@@ -63,30 +63,32 @@ export class AboutComponent extends React.Component<Props, State> {
                                 </div>
                             </Col>
                         </Row>
-                        <HeaderComponent title={'OUR PROCESS'}/>
-                        <Row className='ourProcessContainer'>
-                            <Col lg={4} md={6} sm={12}>
-                                <img src={require('../../assets/icon-images/lightBuldHead.png')}/>
-                                <p className="processHeaderText">You <span style={{color:'red'}}>Dream</span> It</p>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, felis et accumsan iaculis, tortor augue semper nibh, non porttitor est felis nec ligula. Etiam tellus mauris, accumsan eget pharetra vel, accumsan at ligula.
-                                </p>
-                            </Col>
-                            <Col lg={4} md={6} sm={12}>
-                                <img src={require('../../assets/icon-images/hammer.png')}/>
-                                <p className="processHeaderText">We <span style={{color:'red'}}>Build</span> It</p>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, felis et accumsan iaculis, tortor augue semper nibh, non porttitor est felis nec ligula. Etiam tellus mauris, accumsan eget pharetra vel, accumsan at ligula.
-                                </p>
-                            </Col>
-                            <Col lg={4} md={12} sm={12}>
-                                <img src={require('../../assets/icon-images/optimization.png')}/>
-                                <p className="processHeaderText">Together, We <span style={{color:'red'}}>Deploy</span> It</p>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, felis et accumsan iaculis, tortor augue semper nibh, non porttitor est felis nec ligula. Etiam tellus mauris, accumsan eget pharetra vel, accumsan at ligula.
-                                </p>
-                            </Col>
-                        </Row>
+                        <div style={{marginTop: 50}}>
+                            <HeaderComponent title={'OUR PROCESS'}/>
+                            <Row className='ourProcessContainer'>
+                                <Col lg={4} md={6} sm={12}>
+                                    <img src={require('../../assets/icon-images/lightBuldHead.png')}/>
+                                    <p className="processHeaderText">You <span style={{color:'red'}}>Dream</span> It</p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, felis et accumsan iaculis, tortor augue semper nibh, non porttitor est felis nec ligula. Etiam tellus mauris, accumsan eget pharetra vel, accumsan at ligula.
+                                    </p>
+                                </Col>
+                                <Col lg={4} md={6} sm={12}>
+                                    <img src={require('../../assets/icon-images/hammer.png')}/>
+                                    <p className="processHeaderText">We <span style={{color:'red'}}>Build</span> It</p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, felis et accumsan iaculis, tortor augue semper nibh, non porttitor est felis nec ligula. Etiam tellus mauris, accumsan eget pharetra vel, accumsan at ligula.
+                                    </p>
+                                </Col>
+                                <Col lg={4} md={12} sm={12}>
+                                    <img src={require('../../assets/icon-images/optimization.png')}/>
+                                    <p className="processHeaderText">Together, We <span style={{color:'red'}}>Deploy</span> It</p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, felis et accumsan iaculis, tortor augue semper nibh, non porttitor est felis nec ligula. Etiam tellus mauris, accumsan eget pharetra vel, accumsan at ligula.
+                                    </p>
+                                </Col>
+                            </Row>
+                        </div>
                         <div className="ourWebsitesContainer">
                             <HeaderComponent title='OUR WEBSITES' hrColor='white' titleColor='white'/>
                             <Row style={{marginTop: 20}}>
