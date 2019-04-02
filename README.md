@@ -1,3 +1,8 @@
+# Business Website
+
+Business website in React for a website development startup, starting in the near future.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
