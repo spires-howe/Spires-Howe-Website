@@ -6,10 +6,6 @@
     background-color: 'red';
   }
 
-  .MuiPaper-root-1 {
-    /* background-color: whitesmoke !important; */
-  }
-
   .ourWebsiteTextHeaders {
     font-weight: bold;
     color: black;
@@ -41,3 +37,13 @@
     letter-spacing: 1px;
     text-align: center;
   }
+
+  .imageContainer {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+
+
+ 

@@ -57,7 +57,7 @@ render() {
                   </div>
                 </Col>
               </Row>
-          </Container>
+          </Container>          
             <Route path="/about/" component={AboutComponent} />
         </div>
       </SideTransition>

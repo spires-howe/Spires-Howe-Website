@@ -8,6 +8,12 @@ import HeaderComponent from '../../components/header/header';
 import { ourWebsiteText } from './constants/about-text';
 import Paper from '@material-ui/core/Paper';
 import { FeatureCardComponent } from '../../components/feature-card/feature-card';
+import { FooterComponent } from '../../components/footer/footer';
+import Button from 'react-bootstrap/Button';
+import { BrowserRouter as Router, Route, Link, withRouter, NavLink, Redirect, RouteComponentProps } from "react-router-dom";
+import HomeComponent from '../home/home';
+import { PricingComponent } from '../pricing/pricing';
+
 
 
 interface State {
@@ -45,17 +51,17 @@ export class AboutComponent extends React.Component<Props, State> {
             <div>
                 <SideTransition className="sidebar" pose={isOpen ? 'open' : 'closed'}>
                     <Container fluid={true}>
-                        <Row>
-                            <Col lg={true}>
+                        <Row style={{backgroundColor: 'rgba(225, 83, 64, 0.92)'}}>
+                            <Col lg={true} className="bannerShadow">
                                 <div className="bannerTextContainer">
-                                    <HeaderComponent title={'WHAT WE DO'} hrColor='red'/>
+                                    <HeaderComponent title={'WHAT WE DO'} hrColor='white' titleColor='white'/>
                                     <div>
-                                        <div className="handIconContainer">
-                                            <div style={{backgroundColor:'white', width:'100px'}} className={'handIcon'}>
-                                                <img src={require('../../assets/icon-images/handshake.png')}/>   
-                                            </div>
-                                        </div>
-                                        <p style={{letterSpacing:"2px", fontSize:'20px'}}>
+                                        {/* <div className="handIconContainer"> */}
+                                            {/* <div style={{backgroundColor:'white', width:'100px'}} className={'handIcon'}> */}
+                                                {/* <img src={require('../../assets/icon-images/handshake.png')}/>    */}
+                                            {/* </div> */}
+                                        {/* </div> */}
+                                        <p style={{letterSpacing:"2px", fontSize:'20px', color: 'white'}}>
                                             At Spires & Howe we treat our websites as a product. Rather than contracting our <br />services at an hourly rate, we provide websites at a set price. 
                                             You know <br />exactly what we are building and you know the exact final price.
                                         </p>
@@ -63,9 +69,10 @@ export class AboutComponent extends React.Component<Props, State> {
                                 </div>
                             </Col>
                         </Row>
-                        <div style={{marginTop: 50}}>
+                        <div style={{marginTop: 80}}>
                             <HeaderComponent title={'OUR PROCESS'}/>
                             <Row className='ourProcessContainer'>
+                                <Col lg={2}></Col>
                                 <Col lg={4} md={6} sm={12}>
                                     <img src={require('../../assets/icon-images/lightBuldHead.png')}/>
                                     <p className="processHeaderText">You <span style={{color:'red'}}>Dream</span> It</p>
@@ -80,6 +87,9 @@ export class AboutComponent extends React.Component<Props, State> {
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, felis et accumsan iaculis, tortor augue semper nibh, non porttitor est felis nec ligula. Etiam tellus mauris, accumsan eget pharetra vel, accumsan at ligula.
                                     </p>
                                 </Col>
+                                <Col lg={2}></Col>
+                            </Row>
+                            <Row className="ourProcessContainer justify-content-md-center">
                                 <Col lg={4} md={12} sm={12}>
                                     <img src={require('../../assets/icon-images/optimization.png')}/>
                                     <p className="processHeaderText">Together, We <span style={{color:'red'}}>Deploy</span> It</p>
@@ -88,42 +98,43 @@ export class AboutComponent extends React.Component<Props, State> {
                                     </p>
                                 </Col>
                             </Row>
+                            <hr></hr>
                         </div>
                         <div className="ourWebsitesContainer">
-                            <HeaderComponent title='OUR WEBSITES' hrColor='white' titleColor='white'/>
                             <Row style={{marginTop: 20}}>
-                                <Col lg={1} md={1}></Col>
-                                <Col lg={5} md={5}>
-                                    <FeatureCardComponent cardTitle={'The Best Technologies'} cardDesc={ourWebsiteText} />
+                                <Col lg={4} md={4}>
+                                    <FeatureCardComponent cardTitle={'The Best Technologies'} cardDesc={ourWebsiteText}/>
                                 </Col>
-                                <Col lg={5} md={5}>
+                                <Col lg={4} md={4}>
                                     <FeatureCardComponent cardTitle={'Content Management System'} cardDesc={ourWebsiteText}/>
                                 </Col>
-                                <Col lg={1} md={1}></Col>
-                            </Row>
-                            <Row style={{marginTop: 20}}>
-                                <Col lg={1} md={1}></Col>
-                                <Col lg={5} md={5}>
+                                <Col lg={4} md={4}>
                                     <FeatureCardComponent cardTitle={'Optional Photography Included'} cardDesc={ourWebsiteText}/>
                                 </Col>
-                                <Col lg={5} md={5}>
-                                    <FeatureCardComponent cardTitle={'Optional Search Engine Optimisation'} cardDesc={ourWebsiteText}/>
-                                </Col>
-                                <Col lg={1} md={1}></Col>
                             </Row>
                             <Row style={{marginTop: 20}}>
-                                <Col lg={1} md={1}></Col>
-                                <Col lg={5} md={5}>
+                                <Col lg={2} md={2}></Col>
+                                <Col lg={4} md={4}>
+                                    <FeatureCardComponent cardTitle={'Optional Photography Included'} cardDesc={ourWebsiteText}/>
+                                </Col>
+                                <Col lg={4} md={4}>
+                                    <FeatureCardComponent cardTitle={'Optional Search Engine Optimisation'} cardDesc={ourWebsiteText}/>
+                                </Col>
+                                <Col lg={2} md={2}></Col>
+                            </Row>
+                            <Row style={{marginTop: 20}}>
+                                <Col lg={2} md={2}></Col>
+                                <Col lg={4} md={4}>
                                     <FeatureCardComponent cardTitle={'Graphic and Logo Design'} cardDesc={ourWebsiteText}/>
                                 </Col>
-                                <Col lg={5} md={5}>
+                                <Col lg={4} md={4}>
                                     <FeatureCardComponent cardTitle={'Graphic and Logo Design'} cardDesc={ourWebsiteText}/>
                                 </Col>
-                                <Col lg={1} md={1}></Col>
+                                <Col lg={2} md={2}></Col>
                             </Row>
                         </div>
-                        
                     </Container>
+                    <FooterComponent />
                 </SideTransition>
                 {/* <div>Icons made by 
                     <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons

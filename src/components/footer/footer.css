@@ -1,4 +1,7 @@
 .footerContainer {
-    height: 200px;
+    margin-top: 80px;
+    /* height: 200px; */
     background-color: #121212;
+    text-align: center;
+    color: white;
 }

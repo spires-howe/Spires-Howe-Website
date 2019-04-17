@@ -52,7 +52,7 @@ export class EmailComponent extends React.Component<Props, State> {
 
     render() {
         return (
-                <Form onSubmit={(e: any) => this.handleSubmit(e)} style={{marginBottom: '50px'}}>
+                <Form onSubmit={(e: any) => this.handleSubmit(e)}>
                     <Form.Group controlId='formBasicName' as={Row}> 
                         <Col lg="5" sm="8">
                             <Form.Control 
