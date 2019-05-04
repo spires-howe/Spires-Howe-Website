@@ -24,20 +24,26 @@ export class FooterComponent extends React.Component {
                                 </NavLink> 
                                 </div>
                             </Col>
-                            <Col lg={3} sm={6}> 
-                                <div>
-                                    <p>What We Do</p>
-                                </div>
+                            <Col lg={3} sm={6}>
+                                <NavLink to="/about">
+                                    <div>
+                                        <p style={{color: 'white'}}>What We Do</p>
+                                    </div>
+                                </NavLink> 
                             </Col>
                             <Col lg={3} sm={6}> 
-                                <div>
-                                    <p>Pricing</p>
-                                </div>
+                                <NavLink to="/pricing">
+                                    <div>
+                                        <p style={{color: 'white'}}>Pricing</p>
+                                    </div>
+                                </NavLink> 
                             </Col>
                             <Col lg={3} sm={6}> 
-                                <div>
-                                    <p>Contact Us</p>
-                                </div>
+                                <NavLink to="/contact">
+                                    <div>
+                                        <p style={{color: 'white'}}>Contact Us</p>
+                                    </div>
+                                </NavLink> 
                             </Col>
                         </Row>
                         <hr style={{backgroundColor: 'white'}}/>

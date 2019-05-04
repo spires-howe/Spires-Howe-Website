@@ -70,8 +70,8 @@ export class ContactComponent extends React.Component<Props, State> {
                             </div>
                             <EmailComponent />
                         </div>
-                        <FooterComponent />
                     </Container>
+                    <FooterComponent />
                 </SideTransition>
             </div>
         )

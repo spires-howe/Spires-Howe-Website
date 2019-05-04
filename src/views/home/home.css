@@ -1,3 +1,12 @@
+.homeInitialContainer {
+    height: calc(100vh - 61px);
+}
+
+.homebg {
+    background: url('../../assets/background2.jpg');
+    background-size: cover;
+}
+
 .homeHeaderText {
     font-size: 100px;
     text-align: center;
@@ -5,9 +14,15 @@
     letter-spacing: 1.5px;
 }
 
+@media screen and (max-width: 400px) {
+    h1.homeHeaderText {
+        font-size: 50px;
+    }
+}
+
 .homeHeaderContainer {
-    margin-top: 150px;
-    
+    /* margin-top: 150px; */
+    margin-top: 25%;
 }
 
 .homeHeaderDescContainerText {
@@ -15,6 +30,13 @@
     font-size: 30px;
     letter-spacing: 1px;
 }
+
+@media screen and (max-width: 400px) {
+    p.homeHeaderDescContainerText {
+        font-size: 20px;
+    }
+}
+
 
 .homeHeaderDescContainerText--secondary {
     font-size: 25px;
@@ -28,4 +50,76 @@
 .buttonContainer {
     display: flex;
     justify-content: center;
+}
+
+.nzBanner {
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+    url('../../assets/nzBack.jpg');
+    background-size: cover;
+    min-height: 550px;
+}
+
+.kiwiHeaderText {
+    text-align: center;
+    color: white;
+    font-size: 45px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.kiwiDescContainer {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+.reviewContainer {
+    margin-top: 150px;
+}
+
+.reviewTitleText {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.homeFeatureIconContainer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.homeFeatureIconText {
+    font-size: 20px;
+    margin-top: 10px;
+}
+.circleButtonContainer {
+    text-align: center;
+    margin-top: 150px; 
+}
+
+@media screen and (max-width: 697px) {
+    div.circleButtonContainer {
+        margin-top: 100px;
+    }
+}
+
+.circleButton {
+    display: inline-block;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 50px;
+    top: -3px;
+    font-size: 30px;
+}
+
+.homeContactContainer {
+    text-align: center;
+    font-size: 25px;
 }

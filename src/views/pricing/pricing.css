@@ -1,0 +1,49 @@
+.pricingContainer {
+    margin-top: 10px;
+}
+
+.priceBannerContainer {
+    background-color: rgba(225, 83, 64, 0.92);
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
+
+.bundleText {
+    color: white;
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.priceText {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.priceColumnContainer {
+
+    margin-top: 40px;
+    -webkit-box-shadow: 10px 10px 17px -2px rgba(87,84,87,1);
+    -moz-box-shadow: 10px 10px 17px -2px rgba(87,84,87,1);
+    box-shadow: 10px 10px 17px -2px rgba(87,84,87,1);
+}
+
+.bundleFeaturesContainer {
+    border: 1px solid lightgray;
+}
+
+.bundleFeatureContainer {
+    margin-top: 15px;
+    border-bottom: 1px solid lightgray;
+}
+
+.bundleFeatureText {
+    text-align: center;
+    font-size: 20px;
+}
+
+.pricingDescText {
+    font-size: 17px;
+}
