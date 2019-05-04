@@ -21,9 +21,7 @@
 }
 
 .homeHeaderContainer {
-    /* margin-top: 150px; */
-    margin-top: calc((100vh - 61px)/4) ;
-    /* margin-top: 25%; */
+    margin-top: calc((100vh - 61px)/4);
 }
 
 .homeHeaderDescContainerText {
@@ -97,12 +95,12 @@
 }
 .circleButtonContainer {
     text-align: center;
-    margin-top: 150px; 
+    margin-top: 50px; 
 }
 
-@media screen and (max-width: 697px) {
+@media screen and (max-width: 485px) {
     div.circleButtonContainer {
-        margin-top: 100px;
+        margin-top: 10px;
     }
 }
 
