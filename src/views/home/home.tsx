@@ -179,7 +179,7 @@ render() {
                 </Col>
               </Row>
               <Row>
-                <Col md={{offset: 3, span: 6}} lg={{offset: 3, span: 4}}>
+                <Col md={{offset: 1, span: 10}} lg={{offset: 3, span: 4}}>
                     <div className="priceColumnContainer">
                         <div className="priceBannerContainer">
                             <p style={{marginBottom: 0}} className="bundleText">
