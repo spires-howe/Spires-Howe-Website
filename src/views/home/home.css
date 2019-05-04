@@ -22,7 +22,8 @@
 
 .homeHeaderContainer {
     /* margin-top: 150px; */
-    margin-top: 25%;
+    margin-top: calc((100vh - 61px)/4) ;
+    /* margin-top: 25%; */
 }
 
 .homeHeaderDescContainerText {
