@@ -49,7 +49,7 @@ export class PricingComponent extends React.Component<Props, State> {
                     <div className="pricingContainer">
                         <HeaderComponent title="PRICING"/>
                         <Row>
-                            <Col md={{offset: 3, span: 6}} lg={{offset: 4, span: 3}}>
+                            <Col md={{offset: 3, span: 6}} lg={{offset: 3, span: 4}}>
                                 <div className="priceColumnContainer">
                                     <div className="priceBannerContainer">
                                         <p style={{marginBottom: 0}} className="bundleText">
