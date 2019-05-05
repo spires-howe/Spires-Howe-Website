@@ -27,17 +27,17 @@ class App extends React.Component<Props> {
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse>
               <Nav className="ml-auto">
-                  <NavRouting routePath='/home' routeText='Home'/>
+                  <NavRouting routePath='/' routeText='Home'/>
                   <NavRouting routePath='/about' routeText='What We Do'/>
                   <NavRouting routePath='/pricing' routeText='Pricing'/>             
                   <NavRouting routePath='/contact' routeText='Contact Us'/>                    
               </Nav>
               </Navbar.Collapse>
             </Navbar>
-            <Route exact path="/" render={() => (
+            {/* <Route exact path="/" render={() => (
               <Redirect to="/home"/>              
-            )} />
-              <Route path="/home/" component={HomeComponent} />
+            )} /> */}
+              <Route path="/" exact component={HomeComponent} />
               <Route path="/pricing/" component={PricingComponent} />
               <Route path="/about/" component={AboutComponent} />
               <Route path="/contact/" component={ContactComponent} />

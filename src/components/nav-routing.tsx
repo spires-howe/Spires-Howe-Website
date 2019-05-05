@@ -14,12 +14,26 @@ export class NavRouting extends React.Component<Props> {
         return (
             <Nav>
                 <Nav.Link>
-                    <NavLink 
-                        to={this.props.routePath}
-                        activeClassName="selectedNavLink"
-                        >
-                        {this.props.routeText}
-                    </NavLink>
+                    {
+                        this.props.routePath == '/'
+                            &&
+                            <NavLink 
+                                to={this.props.routePath}
+                                // activeClassName="selectedNavLink"
+                                >
+                                {this.props.routeText}
+                            </NavLink>
+                    }
+                    {
+                        this.props.routePath !== '/'
+                            &&
+                            <NavLink 
+                                to={this.props.routePath}
+                                activeClassName="selectedNavLink"
+                                >
+                                {this.props.routeText}
+                            </NavLink>
+                    }
                 </Nav.Link>
             </Nav>  
         )

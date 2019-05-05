@@ -17,7 +17,7 @@ export class FooterComponent extends React.Component {
                         <Row style={{paddingTop: 30}}> 
                             <Col lg={3} sm={6}> 
                                 <div>
-                                <NavLink to="/home">
+                                <NavLink to="/">
                                     <p style={{color: 'white'}}>
                                     Spires & Howe
                                     </p>
@@ -69,9 +69,9 @@ export class FooterComponent extends React.Component {
                                 </p>
                             </Col>
                         </Row>
-                        <Route exact path="/" render={() => (
+                        {/* <Route exact path="/" render={() => (
                             <Redirect to="/home"/>              
-                        )} />
+                        )} /> */}
                     </Container>
                 </div>
         )
