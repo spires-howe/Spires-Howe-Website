@@ -226,7 +226,7 @@ render() {
                             </div> 
                             <div className="bundleFeatureContainer">
                                 <p className="bundleFeatureText">
-                                - $20 per hour additional feature cost
+                                - $20 per hour additional feature cost*
                                 </p>
                             </div>    
                         </div>
