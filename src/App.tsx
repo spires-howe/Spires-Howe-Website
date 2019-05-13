@@ -21,7 +21,9 @@ class App extends React.Component<Props> {
             <Navbar bg="light" expand="lg" sticky='top' >
             <Nav>
               <Navbar.Brand>
-                <Link to="/">Spires & Howe</Link>
+                <Link to="/">
+                <img src={require('./assets/SpiresHoweLogo.png')} height='50px'/>
+                Spires & Howe</Link>
               </Navbar.Brand>
             </Nav>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />

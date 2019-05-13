@@ -43,26 +43,31 @@ render() {
       <SideTransition className="sidebar" pose={isOpen ? 'open' : 'closed'}>
         <div>
           <Container fluid={true}>
-              <Row className="homebg">
-                <Col lg={true}>
-                <div className="homeInitialContainer">
-                  <div className="homeHeaderContainer"> 
-                      <h1 className="homeHeaderText">Spires & Howe</h1>
-                      <div className="homeHeaderDescContainer">
-                        <p className="homeHeaderDescContainerText">We build <span style={{color:'red'}}>custom</span> and <span style={{color:'red'}}>affordable websites</span>, tailored to your needs. </p>
-                        <p className="homeHeaderDescContainerText homeHeaderDescContainerText--secondary">Websites as a product, not a contracting service.</p>
-                        <hr className="headerHR"/>
-                        <div className="buttonContainer">
-                          <NavLink to="/about"><Button variant="outline-dark">Learn More ➥</Button></NavLink> 
+              <Row>
+                <Col lg={12} className="homeInitialContainer">
+                  <div>
+                    <div className="homeHeaderContainer">                     
+                        <h1 className="homeHeaderText">
+                        
+                        Spires 
+                        <img src={require('../../assets/SpiresHoweLogo.png')} height='150px' style={{textAlign: 'center'}}/>
+                        
+                         Howe</h1>
+                        <div className="homeHeaderDescContainer">
+                          <p className="homeHeaderDescContainerText">We build <span style={{color:'red'}}>custom</span> and <span style={{color:'red'}}>affordable websites</span>, tailored to your needs. </p>
+                          <p className="homeHeaderDescContainerText homeHeaderDescContainerText--secondary">Websites as a product, not a contracting service.</p>
+                          <hr className="headerHR"/>
+                          <div className="buttonContainer">
+                            <NavLink to="/about"><Button variant="outline-dark">Learn More ➥</Button></NavLink> 
+                          </div>
+                          <div className="circleButtonContainer">
+                            <Link activeClass="active" className="test1" to="test1" spy={true} smooth={true} duration={500}>
+                              <Button variant="outline-dark" className="circleButton">↓</Button>
+                            </Link>
+                          </div>
                         </div>
-                        <div className="circleButtonContainer">
-                          <Link activeClass="active" className="test1" to="test1" spy={true} smooth={true} duration={500}>
-                            <Button variant="outline-dark" className="circleButton">↓</Button>
-                          </Link>
-                        </div>
-                      </div>
+                    </div>
                   </div>
-                </div>
                 </Col>
               </Row>
               <Row className="nzBanner">

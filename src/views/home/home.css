@@ -1,10 +1,11 @@
 .homeInitialContainer {
-    height: calc(100vh - 61px);
+    min-height: calc(100vh - 61px);
+    background: url('../../assets/background2.jpg');
+    background-size: cover;
 }
 
 .homebg {
-    background: url('../../assets/background2.jpg');
-    background-size: cover;
+    
 }
 
 .homeHeaderText {
