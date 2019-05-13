@@ -58,7 +58,7 @@ render() {
                           <p className="homeHeaderDescContainerText homeHeaderDescContainerText--secondary">Websites as a product, not a contracting service.</p>
                           <hr className="headerHR"/>
                           <div className="buttonContainer">
-                            <NavLink to="/about"><Button variant="outline-dark">Learn More ➥</Button></NavLink> 
+                            <NavLink to="/about"><Button variant="outline-dark" style={{fontSize: 21}}>Learn More ➥</Button></NavLink> 
                           </div>
                           <div className="circleButtonContainer">
                             <Link activeClass="active" className="test1" to="test1" spy={true} smooth={true} duration={500}>
