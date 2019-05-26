@@ -9,6 +9,7 @@ import { AboutComponent } from '../about/about';
 import posed from 'react-pose';
 import Button from 'react-bootstrap/Button';
 import { FooterComponent } from '../../components/footer/footer';
+import ReviewCard from '../../components/review-card/review-card';
 
 interface Props {
 }
@@ -164,6 +165,18 @@ render() {
                         Reviews
                       </p>
                     </div>
+                  </div>
+                </Col>
+              </Row>
+              <Row>
+                <Col lg={{offset: 4, span: 4}}>
+                  <hr />
+                </Col>
+              </Row>
+              <Row>
+                <Col lg={{offset: 3, span: 4}}>
+                  <div style={{marginTop: 20}}>
+                    <ReviewCard />
                   </div>
                 </Col>
               </Row>
