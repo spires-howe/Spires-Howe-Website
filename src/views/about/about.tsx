@@ -72,14 +72,14 @@ export class AboutComponent extends React.Component<Props, State> {
                                     <img src={require('../../assets/icon-images/lightBuldHead.png')}/>
                                     <p className="processHeaderText">You <span style={{color:'red'}}>Dream</span> It</p>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, felis et accumsan iaculis, tortor augue semper nibh, non porttitor est felis nec ligula. Etiam tellus mauris, accumsan eget pharetra vel, accumsan at ligula.
+                                        We meet face to face, over the phone or through email, whatever medium of communication suits you the most. We then work with you closely to help discover and define your key requirements for the perfect website solution.
                                     </p>
                                 </Col>
                                 <Col lg={4} md={6} sm={12}>
                                     <img src={require('../../assets/icon-images/hammer.png')}/>
                                     <p className="processHeaderText">We <span style={{color:'red'}}>Build</span> It</p>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, felis et accumsan iaculis, tortor augue semper nibh, non porttitor est felis nec ligula. Etiam tellus mauris, accumsan eget pharetra vel, accumsan at ligula.
+                                        After gathering your primary requirements, we get to work. Designing and developing professional yet beautiful websites to help boost your business value or fulfil your personal requests. 
                                     </p>
                                 </Col>
                                 <Col lg={2}></Col>
@@ -89,7 +89,7 @@ export class AboutComponent extends React.Component<Props, State> {
                                     <img src={require('../../assets/icon-images/optimization.png')}/>
                                     <p className="processHeaderText">Together, We <span style={{color:'red'}}>Deploy</span> It</p>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, felis et accumsan iaculis, tortor augue semper nibh, non porttitor est felis nec ligula. Etiam tellus mauris, accumsan eget pharetra vel, accumsan at ligula.
+                                        After creating your website, we work closely with you to get it officially up and running. Doing all the tricky hosting parts ourselves, we provide further support for any future hosting and management changes.
                                     </p>
                                 </Col>
                             </Row>
